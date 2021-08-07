@@ -225,6 +225,16 @@ software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 #### then change update function
 
 ```php
+use Bitfumes\Multiauth\Model\Role;
+use Illuminate\Routing\Controller;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Bitfumes\Multiauth\Http\Requests\AdminRequest;
+use Bitfumes\Multiauth\Notifications\RegistrationNotification;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
+
+
 
  public function update($adminId, Request $request)
     {
